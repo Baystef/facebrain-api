@@ -4,7 +4,9 @@
   "description": "Server for the facebrain application",
   "main": "index.js",
   "scripts": {
-    "start": "babel-watch index.js"
+    "start:dev": "babel-watch server/index.js",
+    "start": "node build/index.js",
+    "build": "babel server --out-dir build"
   },
   "repository": {
     "type": "git",

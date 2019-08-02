@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import bcrypt from 'bcrypt';
+import morgan from 'morgan';
 import db from './db';
 import {
   handleRegister, handleImage, handleApiCall, handleProfile, handleSignin
@@ -8,6 +9,7 @@ import {
 
 
 const app = express();
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors())
 
