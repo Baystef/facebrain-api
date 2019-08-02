@@ -26,6 +26,8 @@ app.put('/image', (req, res) => { handleImage(req, res, db) })
 
 app.post('/imageurl', (req, res) => { handleApiCall(req, res) })
 
-app.listen(3300, () => {
-  console.log('App is running on port 3300');
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`App is running on port ${port}`);
 })
